@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Nexus IA — L'intelligence artificielle sans limites</title>
+    
+    <!-- SEO & Social Sharing (OpenGraph) -->
+    <meta name="description" content="Plateforme IA tout-en-un : Chat intelligent, Génération d'images, Synthèse vocale et Analyse visuelle.">
+    <meta property="og:title" content="Nexus IA">
+    <meta property="og:description" content="Accédez à la puissance de l'IA nouvelle génération.">
+    <meta property="og:image" content="https://api.dicebear.com/7.x/bottts/svg?seed=nexus&backgroundColor=6366f1">
+    <meta property="og:type" content="website">
+    
+    <!-- PWA & Mobile Optimization -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nexus IA">
+    <meta name="theme-color" content="#09090b">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="https://api.dicebear.com/7.x/bottts/svg?seed=nexus&backgroundColor=6366f1">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+
+        if (localStorage.getItem('nexus_theme') === 'dark' || (!localStorage.getItem('nexus_theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f5;
+            color: #09090b;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
+            overscroll-behavior-y: none;
+        }
+        .dark body {
+            background-color: #09090b;
+            color: #fafafa;
+        }
+        .font-heading {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(228, 228, 231, 0.4);
+        }
+        .dark .glass {
+            background: rgba(9, 9, 11, 0.6);
+            border: 1px solid rgba(63, 63, 70, 0.3);
+        }
+        .neon-border {
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+        }
+        .safe-pb { padding-bottom: env(safe-area-inset-bottom); }
+        .safe-pt { padding-top: env(safe-area-inset-top); }
+        
+        ::-webkit-scrollbar { width: 0px; }
+        @media (min-width: 768px) {
+            ::-webkit-scrollbar { width: 6px; }
+            ::-webkit-scrollbar-thumb {
+                background: #27272a;
+                border-radius: 10px;
+            }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

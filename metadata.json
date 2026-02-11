@@ -1,0 +1,8 @@
+{
+  "name": "Nexus IA",
+  "description": "A cutting-edge AI hub integrating advanced text generation, image creation, and speech synthesis powered by Gemini.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
